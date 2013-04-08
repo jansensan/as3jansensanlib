@@ -1,0 +1,56 @@
+<project name="as3jansensanlib" default="Generate ASDoc" basedir="../">
+
+
+	<property file="build/build.properties" />
+	
+	
+	<target name="Generate ASDoc">
+		
+		<echo>--- Generate ASDoc ---</echo>
+		
+		<!-- delete all files in the doc dir -->
+		<delete 
+			includeemptydirs="true"
+			>
+			<fileset 
+				dir="${DOCS_TARGET_DIRECTORY}" 
+				includes="**/*" 
+			/>
+		</delete>
+		
+		<!-- create docs -->
+		<exec 
+			executable="${ASDOC_DIRECTORY}"
+			> 
+			<arg line="	-doc-sources '${SOURCE_DIRECTORY}' 
+						-output '${DOCS_TARGET_DIRECTORY}' 
+						-main-title 'as3jansensanlib' 
+						-window-title 'as3jansensanlib'"
+			/> 
+		</exec>
+		
+		<!-- compress docs -->
+		<antcall target="Compress ASDoc" description="Compress asdocs" />
+		
+	</target>
+	
+	
+	<target name="Compress ASDoc">
+		
+		<echo>--- Compress ASDoc ASDoc ---</echo>
+		
+		<zip
+			destfile="docs/docs.zip"
+			basedir="${DOCS_TARGET_DIRECTORY}"
+			update="true"
+		/>
+		
+	</target>
+	
+	
+	<target name="Include ASDoc into SWC">
+		
+	</target>
+
+
+</project>
