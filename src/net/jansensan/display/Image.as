@@ -81,7 +81,6 @@ package net.jansensan.display
 					var error:IllegalOperationError = new IllegalOperationError();
 					error.message = "The fitting type you have set ('" + type + "') is not supported. Please look at net.jansensan.display.ImageFitting for supported types.";
 					throw error;
-					break;
 			}
 		}
 
@@ -106,7 +105,6 @@ package net.jansensan.display
 					var error:IllegalOperationError = new IllegalOperationError();
 					error.message = "The alignment type you have set ('" + type + "') is not supported. Please look at net.jansensan.display.ImageAlignment for supported types.";
 					throw error;
-					break;
 			}
 		}
 
