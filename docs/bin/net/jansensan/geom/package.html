@@ -10,10 +10,27 @@
 				
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Package"); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false	,false,true,false,false,false);}	
 				-->
-			</script><div class="MainContent"><br><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Function</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hitTestCircle()" class="signatureLink">hitTestCircle</a>(point:Point, center:Point, radius:Number):Boolean</div><div class="summaryTableDescription">
+			</script><div class="MainContent"><br><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Function</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getFingerSize()" class="signatureLink">getFingerSize</a>(ppi:uint):uint</div><div class="summaryTableDescription">
+	 When using multiple devices, it may be unadvised to use preset pixel dimensions for UI elements, 
+	 since each device has different resolutions and pixel density.
+	 
+	 It is then ideal to find a dimension that can represent the size of a finger on the display support.</div></td><td class="summaryTableOwnerCol">net.jansensan.geom</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hitTestCircle()" class="signatureLink">hitTestCircle</a>(point:Point, center:Point, radius:Number):Boolean</div><div class="summaryTableDescription">
 	 Tests if a point is inside a circle.</div></td><td class="summaryTableOwnerCol">net.jansensan.geom</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hitTestEllipse()" class="signatureLink">hitTestEllipse</a>(point:Point, center:Point, ellipse:Rectangle):Boolean</div><div class="summaryTableDescription">
 	 Tests if a point is inside an ellipse.</div></td><td class="summaryTableOwnerCol">net.jansensan.geom</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hitTestRect()" class="signatureLink">hitTestRect</a>(point:Point, rect:Rectangle):Boolean</div><div class="summaryTableDescription">
-	 Tests if a point is inside a rectangle.</div></td><td class="summaryTableOwnerCol">net.jansensan.geom</td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader"> Function detail </div><a name="hitTestCircle()"></a><a name="hitTestCircle(flash.geom.Point,flash.geom.Point,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hitTestCircle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">function</td></tr></table><div class="detailBody"><code> public function hitTestCircle(point:Point, center:Point, radius:Number):Boolean</code><p></p><p></p><p>
+	 Tests if a point is inside a rectangle.</div></td><td class="summaryTableOwnerCol">net.jansensan.geom</td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader"> Function detail </div><a name="getFingerSize()"></a><a name="getFingerSize(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getFingerSize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">function</td></tr></table><div class="detailBody"><code> public function getFingerSize(ppi:uint):uint</code><p></p><p></p><p>
+	 <p>When using multiple devices, it may be unadvised to use preset pixel dimensions for UI elements, 
+	 since each device has different resolutions and pixel density.</p>
+	 
+	 <p>It is then ideal to find a dimension that can represent the size of a finger on the display support. 
+	 Apple chose a fixed dimension in pixels, although that works only for their devices.</p>
+	 
+	 <p>This function returns the ideal size of the edge of a square that a finger would cover 
+	 with a given pixel density (PPI).</p>
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">ppi</span>:uint</code> &mdash; The pixel density (PPI) of the device or display support.
+	 
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; Returns the ideal size of the edge of a square that a finger covers with the given pixel density (PPI).
+	 </td></tr></table></div><a name="hitTestCircle()"></a><a name="hitTestCircle(flash.geom.Point,flash.geom.Point,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hitTestCircle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">function</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function hitTestCircle(point:Point, center:Point, radius:Number):Boolean</code><p></p><p></p><p>
 	 Tests if a point is inside a circle.
 	 
 	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">point</span>:Point</code> &mdash; The point to test.
@@ -36,4 +53,4 @@
 	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">rect</span>:Rectangle</code> &mdash; The rectangle in which to test the point.
 	 
 	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; Returns <code>true</code> or <code>false</code> depending if the point is inside the rectangle.
-	 </td></tr></table></div><p></p><center class="copyright"><footer></footer><br/>Tue Aug 28 2012, 03:34 PM -04:00  </center></div></body></html>
+	 </td></tr></table></div><p></p><center class="copyright"><footer></footer><br/>Fri Mar 28 2014, 12:39 PM -04:00  </center></div></body></html>
