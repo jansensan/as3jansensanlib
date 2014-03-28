@@ -2,7 +2,7 @@ package net.jansensan.geom
 {
 	/**
 	 * <p>When using multiple devices, it may be unadvised to use preset pixel dimensions for UI elements, 
-	 * since each device has different resolutions and pixel density.<p>
+	 * since each device has different resolutions and pixel density.</p>
 	 * 
 	 * <p>It is then ideal to find a dimension that can represent the size of a finger on the display support. 
 	 * Apple chose a fixed dimension in pixels, although that works only for their devices.</p>
